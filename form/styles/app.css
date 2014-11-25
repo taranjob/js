@@ -1,0 +1,73 @@
+
+
+/*Plungin Preloader  Style */
+html, body { height: 100%; overflow: hidden; max-width: 640px; margin: 0 auto; display: block; width: 100%; -webkit-touch-callout: none; touch-callout: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+body { background: #000; font-family: "微软雅黑","黑体";}
+#preloader { height: 100%; display: block; position: fixed; top: 0; width: 100%; background: #000; z-index: 101; }
+.load { position: absolute; width: 100%; top: 50%; left: 0; right: 0; margin: auto; transform: translate3d(0, -50%, 0); }
+.load-xy { display: block; margin: 0 auto 15px;width:25%; }
+.load-word { display: block; margin: auto; width:25%;}
+.load-word2{margin: 5px auto;width: 160px;font-size: 12px;text-align: center;font-family:'微软雅黑';color: #fff;}
+
+/*Plugin Timor Style */
+html, body{height: 100%;width: 100%;}
+#lun, .m-page { height: 100%; width: 100%; overflow: hidden; display: none; }
+#lun { display: block; position: relative; }
+.m-page { position: absolute; left: 0; top: 0; text-align: center; transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); }
+.m-page.show { z-index: 10; display: block !important; }
+.m-page.hide { z-index: 5; display: none !important; }
+.m-page.active { z-index: 15; display: block !important; }
+
+/* Plugin erase Style */
+canvas { position: fixed; top: 0; left: 0; z-index: 100; right: 0; margin: auto; transition: 2s; -webkit-transition: 2s; }
+
+/* Music Style */
+.btn-music { display: none; background: url(../images/music.png) no-repeat; width: 30px; height: 30px; position: fixed; bottom: 20px; right: 15px; z-index: 25; background-size: 30px auto; }
+.btn-musiced { -webkit-animation: load2 2s infinite linear; animation: load2 2s infinite linear; }
+
+/* Bottom ICon */
+.btn-bottom { background: url(../images/bottom-icon.png) no-repeat center center; width: 41px; height: 17px; position: fixed; bottom: 10px; right: 0; left: 0; margin: auto; z-index: 25; background-size: 30px auto; -webkit-animation: tap .7s infinite linear; animation: tap .7s infinite linear; }
+
+/*弹出组件*/
+/*   Mask */
+.mask { position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, .3); width: 100%; height: 100%; z-index: 99; display: none; }
+.mask>.share { width: 88%; display: block; margin: 10px auto; }
+.mask>img { width: 100%; display: block; position: absolute;
+bottom: 0; }
+
+/*Plugin form 通用弹窗 */
+#popAlert { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999; }
+#popAlert #popAlert-bg { width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
+#popAlert #popAlert-body { width: 280px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background-color: #fff; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+#popAlert #popAlert-body #popAlert-body-con { height: 30px; margin: 20px; text-align: center; font-size: 16px; line-height: 1.5em; }
+#popAlert #popAlert-body #popAlert-con-btn { display: block; height: 35px; border: 1px #636363 solid; margin: 20px; text-align: center; line-height: 35px; font-size: 18px; color: #000; }
+
+
+/* animate */
+@-webkit-keyframes tap {
+  0% { -webkit-transform: translateY(0); transform: translateY(0); }
+  100% { -webkit-transform: translateY(-15px); transform: translateY(-15px); }
+}
+@keyframes tap {
+  0% { -webkit-transform: translateY(0); transform: translateY(0); }
+  100% { -webkit-transform: translateY(-15px); transform: translateY(-15px); }
+}
+@-webkit-keyframes load2 {
+  0% { -webkit-transform: rotateZ(0deg) }
+  100% { -webkit-transform: rotateZ(-360deg) }
+}
+@keyframes load2 {
+  0% { transform: rotateZ(0deg) }
+  100% { transform: rotateZ(-360deg) }
+}
+.pulse { animation-name: pulse; -webkit-animation-name: pulse; animation-duration: 1.5s; -webkit-animation-duration: 1.5s; animation-iteration-count: infinite; -webkit-animation-iteration-count: infinite; }
+@keyframes pulse {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+@-webkit-keyframes pulse {
+  0% { -webkit-transform: scale(0.95); opacity: 0.7; }
+  50% { -webkit-transform: scale(1); opacity: 1; }
+  100% { -webkit-transform: scale(0.95); opacity: 0.7; }
+}

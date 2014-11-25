@@ -1,51 +1,82 @@
 <!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>my yo project</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
+<html class="">
+<head>
+  <meta charset="utf-8">
+  <title>Media by taranjob</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes"  />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"  />
+  <meta name="format-detection" content="telephone=no , email = no"  />
 
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <!-- build:css(.tmp) styles/app.css -->
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="styles/page.css">
+  <!-- endbuild -->
+  <!-- 引用样式文件(编译)-->
 
-    <style>
-       .m{width: 100%;height: 100%;}
-    </style>
-    <div class="m">
-        <div id="oForm" style="margin-top:50px;">
-          名称<input type="text" class="move"/><br>
-          年龄<input type="text" class="move"/><br>
-          数量<input type="text" class="move"/><br>
-        </div>
+  <script src="scripts/preloader.js"></script>
+  <!-- 引用预加载插件-->
+</head>
+<body>
+
+  <div id="preloader">
+    <div class="load">
+      <img class="load-xy pulse" alt="loading" src="./images/logo.png"/>
+      <div class="load-word2" >powered by weclouds.cn</div>
     </div>
+  </div>
+  <!-- 预加载插件Dom-->
+
+  <div id="lun">
+      <section class="m-page hide page1">
+       <div class="main">
+         <img src="./images/blank.gif" data-echo="./images/bg-1.jpg">
+       </div>
+      </section>
+
+      <section class="m-page hide page2">
+       <div class="main">
+         <img src="./images/blank.gif" data-echo="./images/blank.gif">
+       </div>
+      </section>
+
+      <section class="m-page hide page3">
+       <div class="main">
+         <img src="./images/blank.gif" data-echo="./images/blank.gif">
+       </div>
+      </section>
+  </div>
+  <!-- timor 滑动插件Dom-->
+
+  <div class="btn-bottom" id="bottom"></div>
+  <!-- /.滑动插件 指示箭头Dom-->
+
+  <audio loop="loop" preload="none" src="./src/music.mp3"></audio>
+  <!-- /.音乐插件 音乐文件Dom-->
+  <div class="btn-music" id="music"></div>
+  <!-- /.音乐插件 音乐播放按钮Dom-->
 
 
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js({app,.tmp}) scripts/lib.js -->
+  <script src="scripts/lib/touch.js"></script>
+  <script src="scripts/lib/jquery.js"></script>
+  <!-- endbuild -->
+  <!-- 引用工具插件(编译)-->
 
+  <!-- build:js({app,.tmp}) scripts/app.js -->
+  <script src="scripts/plugin/erase.js"></script>
+  <script src="scripts/plugin/timor.js"></script>
+  <script src="scripts/plugin/echo.js"></script>
+  <script src="scripts/plugin/music.js"></script>
+  <script src="scripts/plugin/weixin.js"></script>
+  <script src="scripts/plugin/form.js"></script>
+  <!-- endbuild -->
+  <!-- 引用功能插件(编译)-->
 
+  <script src="scripts/main.js"></script>
+  <!-- 入口文件-->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/lib/touch.js"></script>
-        <script src="scripts/lib/jquery.js"></script>
-        <script src="scripts/form.js"></script>
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
 </body>
 </html>
