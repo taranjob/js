@@ -23,6 +23,9 @@ var StartLayer = cc.Layer.extend({
       res.Start_S_png,
       function() {
         cc.log('Menu is clicked!');
+        //cc.director.replaceScene(cc.TransitionPageTurn(1,new PlayScene(),false));
+        //var transition= cc.TransitionFade(1, new PlayScene(),cc.color(255,255,255,255));
+        cc.director.runScene(new PlayScene());
       }, this);
 
     startItem.attr({
@@ -35,9 +38,6 @@ var StartLayer = cc.Layer.extend({
     menu.x = 0;
     menu.y = 0;
     this.addChild(menu, 1);
-
-
-
     return true;
   }
 });

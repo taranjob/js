@@ -7,6 +7,7 @@ window.onload = function() {
     cc.LoaderScene.preload(["HelloWorld.png"], function() {
        console.log('preload');
       cc.director.runScene(new StartScene());
+      //cc.director.runScene(new PlayScene());
     }, this);
   }
 
