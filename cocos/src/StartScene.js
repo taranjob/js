@@ -24,7 +24,6 @@ var StartLayer = cc.Layer.extend({
       function() {
         cc.log('Menu is clicked!');
         //cc.director.replaceScene(cc.TransitionPageTurn(1,new PlayScene(),false));
-        //var transition= cc.TransitionFade(1, new PlayScene(),cc.color(255,255,255,255));
         cc.director.runScene(new PlayScene());
       }, this);
 
