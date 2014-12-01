@@ -21,12 +21,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
 });
 
+//全局变量
+var formFn;//表单类
+var status_submit = 1;//表单提交状态
+
 window.addEventListener('load', function() {
   /*擦一擦*/
   var eraseFn = new Taran.Erase;
   eraseFn.init({
       img: "./images/ca.jpg"
   });
+  eraseFn.showErase();
 
   /*音乐插件*/
   var mu = new Raymond.Music();
@@ -62,7 +67,7 @@ window.addEventListener('load', function() {
     }
   });
     /*表单类*/
-  var formFn = new Taran.FormFn;
+  formFn = new Taran.FormFn;
   var status_submit = 1;//表单
   formFn.init({
     id: "oForm",
