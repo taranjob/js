@@ -2,6 +2,10 @@ var TOUCHDELAY=150;
 var COLSIZE=24;
 var dogs=[];
 
+
+var debugModel=false;
+
+
 var UI={
   score:0,
   pg:0,
